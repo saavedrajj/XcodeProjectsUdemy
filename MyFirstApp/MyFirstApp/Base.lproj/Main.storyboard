@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyFirstApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Beatles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MwP-cl-Us8">
+                                <rect key="frame" x="138" y="149" width="134" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="p4b-Bp-pQH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xe2-aI-nFL">
+                                <rect key="frame" x="150" y="462" width="111" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jhJ-LI-2VK"/>
+                                </constraints>
+                                <state key="normal" title="Change"/>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L5y-Pv-zJ8"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="beatles01" translatesAutoresizingMaskIntoConstraints="NO" id="ubU-lR-9df">
+                                <rect key="frame" x="39" y="230" width="336" height="195"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xe2-aI-nFL" firstAttribute="top" secondItem="ubU-lR-9df" secondAttribute="bottom" constant="35" id="0DK-JM-gqc"/>
+                            <constraint firstItem="ubU-lR-9df" firstAttribute="top" secondItem="MwP-cl-Us8" secondAttribute="bottom" constant="62" id="3zQ-Mp-hGl"/>
+                            <constraint firstItem="ubU-lR-9df" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39" id="J1P-Qs-Lmq"/>
+                            <constraint firstItem="MwP-cl-Us8" firstAttribute="centerX" secondItem="xe2-aI-nFL" secondAttribute="centerX" id="VY4-wV-Ujs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MwP-cl-Us8" secondAttribute="trailing" constant="142" id="gLf-8d-610"/>
+                            <constraint firstItem="MwP-cl-Us8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="105" id="h3k-2p-srr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xe2-aI-nFL" secondAttribute="bottom" constant="370" id="oSz-m9-OdQ"/>
+                            <constraint firstItem="ubU-lR-9df" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sbn-kQ-xRP"/>
+                            <constraint firstItem="MwP-cl-Us8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="138" id="sjk-y9-x5S"/>
+                            <constraint firstItem="xe2-aI-nFL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="vTO-3E-y3j"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="ubU-lR-9df" id="Xuk-rk-W0Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="beatles01" width="481" height="568"/>
+    </resources>
+</document>
